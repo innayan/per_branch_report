@@ -25,7 +25,7 @@ changeProject(DslContext.projectId) {
         }
         add {
             projectReportTab {
-                id = "PROJECT_EXT_60"
+                id = "PROJECT_EXT_61"
                 title = "test"
                 startPage = "test.html"
                 buildType = "ReportTabPerBranch_Test"
