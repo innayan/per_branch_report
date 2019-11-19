@@ -66,7 +66,7 @@ project {
             startPage = "test.html"
             buildType = "${ConfigWithBranches.id}"
             sourceBuildRule = ProjectReportTab.SourceBuildRule.LAST_FINISHED
-            param("revisionRuleBranchFilter", "-:*")
+            param("revisionRuleBranchFilter", "+:*")
         }
     }
 }
