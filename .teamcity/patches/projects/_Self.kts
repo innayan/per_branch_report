@@ -25,11 +25,12 @@ changeProject(DslContext.projectId) {
         }
         add {
             projectReportTab {
-                id = "PROJECT_EXT_59"
+                id = "PROJECT_EXT_60"
                 title = "test"
                 startPage = "test.html"
-                buildType = "ReportTabPerBranch_ConfigWithBranches"
+                buildType = "ReportTabPerBranch_Test"
                 sourceBuildRule = ProjectReportTab.SourceBuildRule.LAST_FINISHED
+                param("revisionRuleBranchFilter", "+:<default>")
             }
         }
     }
