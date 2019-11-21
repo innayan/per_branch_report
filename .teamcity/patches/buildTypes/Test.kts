@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.freeDiskSpace
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
 /*
@@ -12,6 +13,16 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("Test")) {
     vcs {
         add(DslContext.settingsRoot.id!!)
+    }
+
+    expectSteps {
+    }
+    steps {
+        insert(0) {
+            script {
+                scriptContent = "dir /b /s | sort"
+            }
+        }
     }
 
     features {
