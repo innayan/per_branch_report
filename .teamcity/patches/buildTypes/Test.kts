@@ -28,7 +28,7 @@ changeBuildType(RelativeId("Test")) {
     features {
         add {
             freeDiskSpace {
-                requiredSpace = "30gb"
+                requiredSpace = "3000gb"
                 failBuild = false
             }
         }
