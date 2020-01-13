@@ -33,5 +33,15 @@ changeProject(DslContext.projectId) {
                 sourceBuildBranchFilter = "+:refs/heads/te*"
             }
         }
+        add {
+            projectReportTab {
+                id = "PROJECT_EXT_64"
+                title = "test1"
+                startPage = "index.html"
+                buildType = "ReportTabPerBranch_ConfigWithBranches"
+                sourceBuildRule = ProjectReportTab.SourceBuildRule.LAST_SUCCESSFUL
+                sourceBuildBranchFilter = "+:<default>"
+            }
+        }
     }
 }
