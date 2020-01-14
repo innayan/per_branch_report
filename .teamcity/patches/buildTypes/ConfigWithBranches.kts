@@ -11,6 +11,11 @@ To apply the patch, change the buildType with id = 'ConfigWithBranches'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("ConfigWithBranches")) {
+    vcs {
+        remove(AbsoluteId("TestArtifacts_HttpsGithubComInnayanMyrepositoryRefsHeadsMaster"))
+        add(RelativeId("HttpsGithubComInnayanMyrepositoryRefsHeadsMaster"))
+    }
+
     expectSteps {
         maven {
             goals = "package"
