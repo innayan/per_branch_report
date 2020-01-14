@@ -23,7 +23,7 @@ create(DslContext.projectId, BuildType({
     """.trimIndent()
 
     vcs {
-        root(AbsoluteId("TestArtifacts_HttpsGithubComInnayanMyrepositoryRefsHeadsMaster"))
+        root(RelativeId("HttpsGithubComInnayanMyrepositoryRefsHeadsMaster1"))
     }
 
     steps {
@@ -40,10 +40,26 @@ create(DslContext.projectId, BuildType({
             dataToKeep = everything()
             preserveArtifactsDependencies = true
         }
-        disableKeepRule("BUILD_EXT_2")
-        disableKeepRule("BUILD_EXT_3")
-        disableKeepRule("BUILD_EXT_4")
-        disableKeepRule("BUILD_EXT_5")
+        keepRule {
+            disabled = true
+            id = "BUILD_EXT_2"
+            keepAtLeast = allBuilds()
+        }
+        keepRule {
+            disabled = true
+            id = "BUILD_EXT_3"
+            keepAtLeast = allBuilds()
+        }
+        keepRule {
+            disabled = true
+            id = "BUILD_EXT_4"
+            keepAtLeast = allBuilds()
+        }
+        keepRule {
+            disabled = true
+            id = "BUILD_EXT_5"
+            keepAtLeast = allBuilds()
+        }
         keepRule {
             id = "BUILD_EXT_6"
             keepAtLeast = builds(51)
