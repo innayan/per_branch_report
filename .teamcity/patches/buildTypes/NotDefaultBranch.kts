@@ -12,5 +12,9 @@ in the root project, and delete the patch script.
 create(DslContext.projectId, BuildType({
     id("NotDefaultBranch")
     name = "Not default branch"
+
+    vcs {
+        root(RelativeId("HttpsGithubComInnayanMyrepositoryBlobAsasas"))
+    }
 }))
 
