@@ -12,7 +12,7 @@ in the root project, and delete the patch script.
 create(DslContext.projectId, GitVcsRoot({
     id("HttpsGithubComInnayanMyrepositoryRefsHeadsMaster")
     name = "https://github.com/innayan/myrepository#refs/heads/master"
-    url = "https://github.com/innayan/myrepository"
+    url = "https://github.com/innayan/myrepository1"
     branch = "refs/heads/asasas"
     branchSpec = "+:*"
     authMethod = password {
